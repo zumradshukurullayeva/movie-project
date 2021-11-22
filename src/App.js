@@ -20,6 +20,9 @@ const  App = () => {
           <Route exact path="/">
             <Home />
           </Route>
+          <Route  path="/catalog/:genreid">
+            <Catalog />
+          </Route>
           <Route  path="/catalog">
             <Catalog />
           </Route>
