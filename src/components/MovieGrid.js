@@ -13,13 +13,13 @@ const MovieGrid = ({genre}) => {
     const [totalPage, setTotalPage] = useState(0);
 
     const prevGenre = usePrevious(genre);
-    let list;
-
+    
     const loadMore = () => {
         setPage(page + 1)
     }
-
+    
     useEffect(() => {
+        let list;
         console.log(genre);
         if(prevGenre !== genre) {
             list = [];
