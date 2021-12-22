@@ -35,6 +35,7 @@ const MovieGrid = ({genre}) => {
             setMovies(list.concat(data.results));
             setTotalPage(data.total_pages);
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [genre, page])
 
     return (
