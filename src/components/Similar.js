@@ -7,7 +7,7 @@ const Similar = (props) => {
     return (
         <div>
             
-            <img className='actor-img' src={IMAGE_URL + props.actorobjcard.poster_path}/>
+            <img alt="actor" className='actor-img' src={IMAGE_URL + props.actorobjcard.poster_path}/>
         </div>
     )
 }

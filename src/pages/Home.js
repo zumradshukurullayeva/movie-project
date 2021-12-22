@@ -5,9 +5,7 @@ import Movie from '../components/Movie';
 import Intro from '../components/Intro'
 import { MY_API_KEY } from '../global';
 import Movielist from '../components/Movielist';
-import styled from 'styled-components'
 import Slider from '../components/Slider';
-import Similar from '../components/Similar';
 const TRENDING_MOVIES_API = `https://api.themoviedb.org/3/trending/all/day?api_key=${MY_API_KEY}lol`;
 
 const MoviesSlider = ({moviesArr}) => {
@@ -17,9 +15,7 @@ const MoviesSlider = ({moviesArr}) => {
         </Swiper>
     )
 }
-// const First = styled.div`
-// display: flex;
-// `
+
 
 const Home = () => {
     const [moviesList, setMoviesList] = useState([]);

@@ -1,11 +1,10 @@
 
 import React, { useEffect,useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay } from "swiper";
+import { Autoplay } from "swiper";
 import styled from 'styled-components'
 import Select from 'react-select';
 import Movie from './Movie';
-import apiCalls from '../config/api';
 
 const MY_API_KEY = '3b62cbd3019cef6ea3bcc5ecce56c01c';
 const API_PARAMS = `?api_key=${MY_API_KEY}&language=en-US`;
@@ -66,7 +65,7 @@ const BigFilter = () => {
           .catch((err) => {
             setError(err.message);
           });
-      }, []);
+      }, [GENRES]);
 
       const newGenreArr = genreList.map((el) => {
         return { value: el.id, label: el.name };
@@ -77,6 +76,7 @@ const BigFilter = () => {
         const mappedGenre = newValue.map((el) => el.value);
         // men tanlayotgan janrlarimni olib join qilib beradi
         console.log(mappedGenre);
+        console.log(setGenre);
         // setGenre(${mappedGenre});
         // setGenre(mappedGenre.join(''));
         // console.log(setGenre(mappedGenre.join('')))

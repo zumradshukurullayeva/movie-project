@@ -16,16 +16,16 @@ const Movielist = ({type, title}) => {
     SwiperCore.use([Autoplay]);
    
     const [moviesList, setMoviesList] = useState([]);
-    const [ isLoading, setIsLoading ] = useState(true);
+    // const [ isLoading, setIsLoading ] = useState(true);
     
     useEffect(() => {
         setTimeout(() => {
             fetch(`https://api.themoviedb.org/3/movie/${type}?api_key=${MY_API_KEY}`).then( res => res.json()).then( data => {
                 setMoviesList(data.results);
-                setIsLoading(false);
+                // setIsLoading(false);
             })
         }, 2000);
-    }, []);
+    }, [type]);
 
     return (
         <div>

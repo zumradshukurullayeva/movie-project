@@ -1,12 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import Loader from '../components/Loader';
 import { MY_API_KEY } from '../global';
-// import Slider from '../components/Slider';
 import SliderCard from './SliderCard';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, {Autoplay} from 'swiper';
-import styled from 'styled-components'
 
 // const MoviesSlider = ({moviesArr}) => {
 //     return (
@@ -19,8 +16,8 @@ import styled from 'styled-components'
 const Slider = ({type, title}) => {
     SwiperCore.use([Autoplay]);
     const [moviesList, setMoviesList] = useState([]);
-    const [ isLoading, setIsLoading ] = useState(true);
-    const [error, setError] = useState();
+    // const [ isLoading, setIsLoading ] = useState(true);
+    // const [error, setError] = useState();
     
     useEffect(() => {
         setTimeout(() => {
@@ -33,12 +30,12 @@ const Slider = ({type, title}) => {
             }) 
             .then( data => {
                 setMoviesList(data.results.slice(1, 4));
-                setIsLoading(false);
+                // setIsLoading(false);
             })
-            .catch((err) => {
-                setIsLoading(false);
-                setError(err.massege)
-            })
+            // .catch((err) => {
+            //     // setIsLoading(fa
+            //     // setError(err.massege)lse);
+            // })
         }, 2000);
     }, []);
 

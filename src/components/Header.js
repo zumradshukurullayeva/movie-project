@@ -1,8 +1,6 @@
 
 import { Link } from "react-router-dom";
 import Logo from '../assets/Без названия.png'
-import Catalog from '../pages/Catalog'
-import Search from '../pages/Search'
 
 const Header = () => {
     return (

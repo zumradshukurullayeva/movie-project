@@ -35,7 +35,7 @@ const ViewMovie = () => {
             setsimilar(data.results);
             console.log(data)
         });
-    }, []);
+    }, [id]);
 
     const Card = styled.div`
     background-repeat: no-repeat;
@@ -58,7 +58,7 @@ const ViewMovie = () => {
     return (
         <Card className = 'view-movie' style= {{ backgroundImage:`url(${ORIGINAL_IMAGE_URL + movieInfo.backdrop_path})`}}>
             <div className='cards'>
-                <img src={IMAGE_URL + movieInfo.poster_path} className = 'movie-img'/>
+                <img alt="movies" src={IMAGE_URL + movieInfo.poster_path} className = 'movie-img'/>
                 <div className='card-reference'>
                     <h1 className='texts'>{movieInfo.original_title}</h1>
                     <h1>{movieInfo.original_name}</h1>

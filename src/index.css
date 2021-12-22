@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.App{
+  padding: 10px 3%;
+}
+
 .loader {
   background: #000;
   background: radial-gradient(#222, #000);
@@ -113,7 +117,6 @@ body {
   display: flex; */
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0 15px;
   
 }
 
@@ -253,12 +256,13 @@ img {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 0 50px;
+  padding: 10px 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  margin-top: 33px;
 }
 
 .texts {
@@ -326,7 +330,7 @@ img {
   width: 5%;
   background-color: yellowgreen;
   padding: 2px 10px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .smil-title {

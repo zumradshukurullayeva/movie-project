@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import usePrevious from '../hooks'
-import apiCalls from '../config/api';
 
 const MY_API_KEY = '3b62cbd3019cef6ea3bcc5ecce56c01c';
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
@@ -22,7 +21,7 @@ const MovieGrid = ({genre}) => {
 
     useEffect(() => {
         console.log(genre);
-        if(prevGenre != genre) {
+        if(prevGenre !== genre) {
             list = [];
         } else {
             list = movies;
